@@ -1,5 +1,19 @@
 # Toy Robot Coding Puzzle
 
+This is a command line Ruby application that simulates a robot
+on a specifiable grid
+
+## Table of contents:
+
+* [Description](./README.md#description)
+  * [Constraints](./README.md#constraints)
+  * [Example Input and Output](./README.md#example-input-and-output)
+* [Setup](./README.md#setup)
+* [Running the app](./README.md#running-the-app)
+* [Running the tests](./README.md#running-the-tests)
+
+## Description
+
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
 - There are no other obstructions on the table surface.
 - The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement
@@ -27,11 +41,12 @@ REPORT
   . Input can be from a file, or from standard input, as the developer chooses.
   . Provide test data to exercise the application.
 
-> Constraints:
+## Constraints:
+
 > The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot.
 > Any move that would cause the robot to fall must be ignored.
 
-Example Input and Output:
+### Example Input and Output:
 
 a)
 
@@ -63,21 +78,39 @@ REPORT
 Output: 3,3,NORTH
 ```
 
-## Guideline
+## Setup
 
-- Think about your solution as a code that will be submitted to production. Add tests to make sure it's bulletproof.
-- Add a README file (or call it a different name) where you can explain your design decisions and any other information you would like to add.  	 
+1. Install the [bundler gem](http://bundler.io/) by running:
 
-## Submitting your solution
+    ```gem install bundler```
 
-- If you have a GitHub account, fork this repo and when your solution is ready for submission, send to us over email your ready to view forked repo URL
-- Otherwise, please use `git bundle` to package up a copy of your repository (with complete commit history) as a single file and send it to us 
-  
-  i.e
-  ```
-  git bundle create toy-robot-coding-challenge.bundle master
-  ```
-  
-----------------
+2. Clone this repo:
 
-  Good luck and looking forward to you submission!
+    ```git clone git@github.com:kingsleywang2013/toy_robot_coding_challenge.git```
+
+3. Change to the app directory:
+
+    ```cd toy_robot_coding_challenge```
+
+4. Install dependencies:
+
+    ```bundle install```
+
+And you're ready to go!
+
+### Running the app
+
+#### Running the app by CLI:
+```ruby toy_robot.rb```
+
+#### Running the app by file
+```ruby toy_robot.rb -f robot_success.txt```
+or
+```ruby toy_robot.rb --file robot_success.txt```
+
+```ruby toy_robot.rb -f robot_hit_edge.txt```
+or
+```ruby toy_robot.rb --file robot_hit_edge.txt```
+
+### Running the tests:
+```bundle exec rspec```

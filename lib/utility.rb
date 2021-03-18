@@ -1,5 +1,4 @@
 require_relative './errors'
-require 'pry'
 
 module Utility
   def extract_action_args_from_command(command)
