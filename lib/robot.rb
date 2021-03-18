@@ -1,5 +1,8 @@
+require_relative './utility'
+
 class Robot
   attr_accessor :table
+  attr_reader :pos_x, :pos_y, :direction
 
   DIRECTIONS = %w[NORTH EAST SOUTH WEST].freeze
 

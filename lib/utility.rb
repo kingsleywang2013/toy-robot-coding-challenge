@@ -1,3 +1,5 @@
+require_relative './errors'
+
 module Utility
   def extract_action_args_from_command(command)
     command.split(' ', 2)

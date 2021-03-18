@@ -1,3 +1,5 @@
+require_relative './utility'
+
 class Table
   attr_reader :width, :height
 

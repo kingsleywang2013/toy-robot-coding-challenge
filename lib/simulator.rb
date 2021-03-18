@@ -2,7 +2,6 @@ require_relative './errors'
 require_relative './utility'
 require_relative './table'
 require_relative './robot'
-require 'pry'
 
 class Simulator
   include Utility
@@ -16,15 +15,15 @@ class Simulator
 
   def run(command)
     # Split user input command to two parts
-    # func is a command action such as 'PLACE', 'MOVE', 'LEFT', 'RIGHT', 'REPORT'
+    # action is a command action such as 'PLACE', 'MOVE', 'LEFT', 'RIGHT', 'REPORT'
     # args is a set of position and direction such as '1,2,NORTH'
 
-    # Get func and args if command is not single word
+    # Get action and args if command is not single word
     action, args = extract_action_args_from_command(command)
 
     validate_action_args(action, args)
 
-    run_actions(action, args) unless action.nil?
+    run_actions(action, args)
   end
 
   private
