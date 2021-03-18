@@ -1,8 +1,9 @@
 require_relative './errors'
+require 'pry'
 
 module Utility
   def extract_action_args_from_command(command)
-    command.split(' ', 2)
+    command.split(' ', 2).compact
   end
 
   def validate_action_args(action, args)

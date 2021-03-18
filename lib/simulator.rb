@@ -19,7 +19,7 @@ class Simulator
     # args is a set of position and direction such as '1,2,NORTH'
 
     # Get action and args if command is not single word
-    action, args = extract_action_args_from_command(command)
+    action, args = extract_action_args_from_command(command.strip)
 
     validate_action_args(action, args)
 
