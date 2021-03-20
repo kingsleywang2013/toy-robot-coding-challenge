@@ -42,7 +42,7 @@ class Command
       @simulator = Simulator.new
 
       while input = gets.chomp
-        input = input.upcase
+        input = input.strip.upcase
         # Exit the loop when input is 'quit' or 'exit'
         break if input == 'QUIT' || input == 'EXIT'
 
